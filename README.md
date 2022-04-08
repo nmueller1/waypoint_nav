@@ -1,5 +1,23 @@
-# waypoint_nav
+# Installation and Launch
+~~~
+cd ~/YourCatkinWorkspace/src
+git clone https://github.com/nmueller1/waypoint_nav.git
+git clone -b melodic-devel https://github.com/cra-ros-pkg/robot_localization.git
+cd ..
+rosdep install --from-paths src --ignore-src -r -y
+catkin_make
+source ./devel/setup.bash
+~~~
 
+`roslaunch outdoor_waypoint_nav outdoor_waypoint_nav_sim.launch`
+
+other terminal:
+`roslaunch outdoor_waypoint_nav joy_launch_control_sim.launch`
+
+Problem: robot does not move
+see also: https://github.com/nickcharron/waypoint_nav/issues/10
+
+# waypoint_nav
 This package performs outdoor GPS waypoint navigation. It can navigate while building a map, avoiding obstacles, and can navigate continuously between each goal or stop at each goal. 
 
 This repo is made to run on a Clearpath Husky with IMU, Novatel GPS, and Sick lms111 lidar.
