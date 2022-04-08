@@ -14,9 +14,6 @@ source ./devel/setup.bash
 other terminal:
 `roslaunch outdoor_waypoint_nav joy_launch_control_sim.launch`
 
-Problem: robot does not move
-see also: https://github.com/nickcharron/waypoint_nav/issues/10
-
 # waypoint_nav
 This package performs outdoor GPS waypoint navigation. It can navigate while building a map, avoiding obstacles, and can navigate continuously between each goal or stop at each goal. 
 
